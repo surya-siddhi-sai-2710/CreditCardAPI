@@ -1,0 +1,22 @@
+{
+    "NewCreditCardDetails": {
+      "NewCustomer": {
+        "accNo": 100021,
+        "name": "surya siddhi sai",
+        "age": 22,
+        "dob": "2001-10-27",
+        "AddressType": {
+          "city": "hyderabad",
+          "pincode": 500019
+        },
+        "CardDetails": {
+          "branchNo": 21,
+          "holderName": "surya siddhi sai",
+          "cibilscore": 700,
+          "deliveryMethod": "standard",
+          "employeeId": 123,
+          "salary": 20000
+        }
+      }
+    }
+  }

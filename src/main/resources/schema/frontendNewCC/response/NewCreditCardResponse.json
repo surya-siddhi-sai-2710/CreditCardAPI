@@ -1,0 +1,11 @@
+{
+    "NewCreditCardResponse": {
+      "accNo": 100021,
+      "CardDetails": {
+        "cardNumber": "12222924",
+        "cardType": "visa",
+        "status": "active",
+        "response": "success"
+      }
+    }
+  }

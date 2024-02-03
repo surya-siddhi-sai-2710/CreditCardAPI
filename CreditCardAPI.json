@@ -1,0 +1,116 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Credit Card API",
+      "version": "1.0.0",
+      "description": "API for Credit Card Operations"
+    },
+    "paths": {
+      "/getcreditcarddetails": {
+        "post": {
+          "summary": "Get Credit Card Details",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "CreditCardDetailsRequest": {
+                    "cardNumber": 1100001123,
+                    "cardType": "MasterCard"
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "CreditCardDetails": {
+                      "CustomerDetails": {
+                        "accNo": 100021,
+                        "name": "surya siddhi sai",
+                        "age": 22,
+                        "dob": "2001-10-27",
+                        "AddressType": {
+                          "city": "hyderabad",
+                          "pincode": 500019
+                        },
+                        "CardDetails": {
+                          "cardNumber": "12222924",
+                          "cardType": "MasterCard",
+                          "branchNo": 21,
+                          "creditLimit": 5000,
+                          "holderName": "surya siddhi sai",
+                          "status": "active",
+                          "cibilScore": 700,
+                          "deliveryMethod": "standard",
+                          "employeeId": 123,
+                          "salary": 20000
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/newcreditcard": {
+        "post": {
+          "summary": "Create New Credit Card",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "NewCreditCardDetails": {
+                    "NewCustomer": {
+                      "accNo": 100021,
+                      "name": "surya siddhi sai",
+                      "age": 22,
+                      "dob": "2001-10-27",
+                      "AddressType": {
+                        "city": "hyderabad",
+                        "pincode": 500019
+                      },
+                      "CardDetails": {
+                        "branchNo": 21,
+                        "holderName": "surya siddhi sai",
+                        "cibilscore": 700,
+                        "deliveryMethod": "standard",
+                        "employeeId": 123,
+                        "salary": 20000
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "NewCreditCardResponse": {
+                      "accNo": 100021,
+                      "CardDetails": {
+                        "cardNumber": "12222924",
+                        "cardType": "visa",
+                        "status": "active",
+                        "response": "success"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

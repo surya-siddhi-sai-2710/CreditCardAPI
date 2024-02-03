@@ -1,0 +1,26 @@
+{
+    "CreditCardDetails": {
+      "CustomerDetails": {
+        "accNo": 100021,
+        "name": "surya siddhi sai",
+        "age": 22,
+        "dob": "2001-10-27",
+        "AddressType": {
+          "city": "hyderabad",
+          "pincode": 500019
+        },
+        "CardDetails": {
+          "cardNumber": "12222924",
+          "cardType": "MasterCard",
+          "branchNo": 21,
+          "creditLimit": 5000,
+          "holderName": "surya siddhi sai",
+          "status": "active",
+          "cibilScore": 700,
+          "deliveryMethod": "standard",
+          "employeeId": 123,
+          "salary": 20000
+        }
+      }
+    }
+  }
