@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class NewCreditCardRequest {
 
-    @JsonProperty("NewCreditCardDetails")
+    @JsonProperty("NewCreditCardRequest")
     private NewCreditCardDetails newCreditCardDetails;
 
     @JsonProperty("NewCreditCardDetails")

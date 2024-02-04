@@ -1,6 +1,7 @@
 package com.dh.creditcard.route;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.dataformat.JsonLibrary;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
 
@@ -25,9 +26,12 @@ public class GetCreditCardDetailsRoute extends RouteBuilder{
 		
 		.to("bean:creditCardService?method=prepareCreditCardRequest")
 		.log("log 1- ${body}")
+		.marshal().json(JsonLibrary.Jackson)
+		.log("log 2 - ${body}")
+		
 		
 		.to("http://localhost:8082/getdetails?bridgeEndpoint=true")
-		.log("log 2 - ${body}")
+		.log("log 3 - ${body}")
 		
 		.to("bean:creditCardService?method=prepareCreditCardResponse")
 		
